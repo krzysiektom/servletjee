@@ -16,8 +16,6 @@ public class Get61 extends HttpServlet {
                     .append("'> Link do roku ")
                     .append(String.valueOf(i))
                     .append(" </a><br>");
-        //<a href='/Project_02/Get62?year=1980'> Link do roku 1980 </a>
-
         }
 
     }
