@@ -14,7 +14,7 @@ public class Get62 extends HttpServlet {
         String year = request.getParameter("year");
         Random random = new Random();
         for (int i = 0; i < 5; i++) {
-            int mix=random.nextInt(21)-10;
+            int mix = random.nextInt(21) - 10;
             response.getWriter().append("<a href='/Get63?year=")
                     .append(year)
                     .append("&mix=")
@@ -24,8 +24,6 @@ public class Get62 extends HttpServlet {
                     .append(", mix ")
                     .append(String.valueOf(mix))
                     .append(" </a><br>");
-
-            //<a href='/Project_02/Get63?year=1985&mix=-2'> Rok 1985, mix -2 </a>
         }
     }
 }

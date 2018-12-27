@@ -7,15 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/Get61")
-public class Get61 extends HttpServlet {
+@WebServlet("/Get63")
+public class Get63 extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        for (int i = 1980; i < 2011; i++) {
-            response.getWriter().append("<a href='/Get62?year=")
-                    .append(String.valueOf(i))
-                    .append("'> Link do roku ")
-                    .append(String.valueOf(i))
-                    .append(" </a><br>");
-        }
+        Integer year = Integer.valueOf(request.getParameter("year"));
+        Integer mix = Integer.valueOf(request.getParameter("mix"));
+        response.getWriter().append("Rok to: ").append(String.valueOf(year + mix));
     }
 }
