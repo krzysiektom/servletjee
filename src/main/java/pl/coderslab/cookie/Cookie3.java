@@ -14,12 +14,9 @@ public class Cookie3 extends HttpServlet {
         String key = request.getParameter("key");
         String value = request.getParameter("value");
         int select = Integer.parseInt(request.getParameter("select"));
-
         Cookie cookie = new Cookie(key, value);
         cookie.setMaxAge(select*60*60);
         response.addCookie(cookie);
         response.getWriter().append("Ciasteczko dodane");
     }
-
 }
-//TODO wartości od 1 - 10 co 1
