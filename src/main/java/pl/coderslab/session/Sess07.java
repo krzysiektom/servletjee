@@ -43,7 +43,7 @@ public class Sess07 extends HttpServlet {
     private String Form(String[][] country) {
         StringBuilder builder = new StringBuilder();
         builder.append("<form method='POST'>")
-                .append("podaj stolicę dla państwa:")
+                .append("Podaj stolicę dla państwa:")
                 .append("<br>");
         for (int i = 0; i < country.length; i++) {
             builder.append("<label>")
