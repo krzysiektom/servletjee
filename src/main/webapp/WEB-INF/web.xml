@@ -1,7 +1,7 @@
 <web-app>
     <servlet>
         <servlet-name>Servlet15</servlet-name>
-        <servlet-class>pl.coderslab.Servlet15
+        <servlet-class>pl.coderslab.servlet.Servlet15
         </servlet-class>
     </servlet>
     <servlet-mapping>
