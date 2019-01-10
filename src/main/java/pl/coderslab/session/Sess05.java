@@ -7,14 +7,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 @WebServlet("/Sess05")
 public class Sess05 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        response.setContentType("text/html; charset=utf-8");
+        HttpSession session = request.getSession();
+        Integer captchaCookie = (Integer) session.getAttribute("captcha");
+        String captcha = request.getParameter("captcha");
+        if (String.valueOf(captchaCookie).equals(captcha)) {
+            response.getWriter().append("Wynik prawidłowy");
+        } else {
+            response.getWriter().append("Wynik nieprawidłowy");
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
